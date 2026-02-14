@@ -51,7 +51,8 @@ export const App: React.FC = () => {
         perPage={amount}
         currentPage={currentPage}
         onPageChange={newPage => {
-          setCurrentPage(newPage);
+        setCurrentPage(newPage);
+        setSearchParams({ page: String(newPage), perPage: String(amount) });
         }}
       />
       <ul>
