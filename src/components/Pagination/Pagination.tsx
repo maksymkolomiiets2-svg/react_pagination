@@ -5,7 +5,7 @@ interface Props {
   total: number;
   perPage: number;
   currentPage?: number;
-  onPageChange: (page: number) => void;
+  onPageChange: (pages: number) => void;
 }
 
 export const Pagination: React.FC<Props> = ({
@@ -22,7 +22,7 @@ export const Pagination: React.FC<Props> = ({
         <a
           data-cy="prevLink"
           className="page-link"
-          href="#prev"
+          href="#"
           aria-disabled={currentPage === 1 ? 'true' : 'false'}
           onClick={e => {
             e.preventDefault();

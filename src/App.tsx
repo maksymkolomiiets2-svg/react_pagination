@@ -10,8 +10,7 @@ export const App: React.FC = () => {
   const [amount, setAmount] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const total = 42;
-  const pages = Math.ceil(total / amount);
-  const end = currentPage !== pages ? currentPage * amount : total;
+  const end = Math.min(currentPage * amount, total);
   const start = amount * (currentPage - 1) + 1;
 
   return (
